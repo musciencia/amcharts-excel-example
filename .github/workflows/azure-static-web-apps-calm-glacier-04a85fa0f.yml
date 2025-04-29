@@ -48,10 +48,9 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_GLACIER_04A85FA0F }}
           action: "upload"
-          app_location: "/src" # App source code path
+          app_location: "/" # App source code path
           api_location: "" # Optional: Azure Functions path
           output_location: "/dist" # Built app content directory
-          app_build_command: "" # Already run above
           github_id_token: ${{ steps.idtoken.outputs.result }}
 
   close_pull_request_job:
